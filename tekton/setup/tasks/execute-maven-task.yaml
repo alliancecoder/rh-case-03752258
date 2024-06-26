@@ -11,7 +11,7 @@ spec:
   # updated ubi8 RH image registry.access.redhat.com/ubi8/openjdk-17@sha256:e8cc2e476282b75d89c73057bfa713db22d72bdb2808d62d981a84c33beb2575
   # updated ubi9 RH image registry.access.redhat.com/ubi9/openjdk-17@sha256:144419dd1caf7c4455418d2dbf99c1c02a07e9c207e9c66e0224b852633ea2fe
     - default: >-
-        registry.redhat.io/ubi8/openjdk-17@sha256:a8165bc2cd5051a96d6937e25ed03155bbd4b731da6e58cebfe2ea83209c16d8
+        registry.access.redhat.com/ubi8/openjdk-21@sha256:106e8c9c801391613b8b55b7b563a3c70c9c593c458ff2486954808d03017acf
       description: Maven base image
       name: MAVEN_IMAGE
       type: string
