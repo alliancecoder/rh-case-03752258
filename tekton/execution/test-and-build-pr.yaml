@@ -5,9 +5,9 @@ metadata:
 spec:
   taskRunTemplate:
     serviceAccountName: case03752258-pipeline-sa
-    podTemplate:
-      nodeSelector:
-        kubernetes.io/hostname: ip-10-0-182-200.ec2.internal
+    # podTemplate:
+    #   nodeSelector:
+    #     kubernetes.io/hostname: ip-10-0-182-200.ec2.internal
   pipelineRef:
     name: test-and-build-reproducer
   params:

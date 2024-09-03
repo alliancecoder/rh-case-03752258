@@ -13,10 +13,6 @@ spec:
   resources: {}
   strategy:
     type: Docker
-    dockerStrategy:
-      from:
-        kind: ImageStreamTag
-        name: 'ubi:latest'
   postCommit: {}
   source:
     type: Dockerfile
