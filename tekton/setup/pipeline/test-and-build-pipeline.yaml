@@ -37,6 +37,8 @@ spec:
         value: $(params.image-tag)
       - name: app-dir
         value: $(params.app-dir)
+      - name: REVISION
+        value: Pipeline
   - name: test-service
     taskRef:
       name: execute-maven-task

@@ -24,6 +24,10 @@ spec:
       description: The git base image     
       type: string
       default: image-registry.openshift-image-registry.svc:5000/openshift/git-task:latest
+    - name: REVISION
+      description: Branch to use
+      type: string
+      default: main
   workspaces:
     - name: source
       description: The git repo will be cloned onto the volume backing this Workspace.
@@ -87,7 +91,7 @@ spec:
         # rm "$(workspaces.source.path)/$(params.app-dir)" -rf
         
         git config --global --add safe.directory "$(workspaces.source.path)/$(params.app-dir)"
-        git clone $(params.repo-url) $(workspaces.source.path)/$(params.app-dir)
+        git clone -b $(params.REVISION) --single-branch $(params.repo-url) $(workspaces.source.path)/$(params.app-dir)
         cd $(workspaces.source.path)/$(params.app-dir)
         git reset --hard $(params.image-tag)
         git filter-branch --subdirectory-filter quarkus
