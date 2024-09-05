@@ -5,22 +5,11 @@ metadata:
     operator.tekton.dev/last-applied-hash: 448360c5fe76c521bee02ec8da5e51ac2449f37fbe948a8414f14c8fe770e92c
     tekton.dev/pipelines.minVersion: 0.12.1
     tekton.dev/tags: build-tool
-  creationTimestamp: "2024-07-11T10:59:29Z"
-  generation: 1
   labels:
     app.kubernetes.io/version: "0.2"
     operator.tekton.dev/operand-name: openshift-pipelines-addons
     operator.tekton.dev/provider-type: redhat
   name: maven
-  ownerReferences:
-  - apiVersion: operator.tekton.dev/v1alpha1
-    blockOwnerDeletion: true
-    controller: true
-    kind: TektonInstallerSet
-    name: addon-custom-clustertask-8jzvx
-    uid: 68e73a61-519f-46a5-85a6-6f17d37cb876
-  resourceVersion: "3250345647"
-  uid: 33383cff-1744-4849-b1cb-36513ec1c7c2
 spec:
   description: This Task can be used to run a Maven build.
   params:

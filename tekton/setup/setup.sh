@@ -21,6 +21,10 @@ oc adm policy add-scc-to-user privileged -z case03752258-pipeline-sa -n case0375
 # CREATE MAVEN SETTINGS CONFIG MAP
 oc create configmap maven-settings --from-file=./settings.xml  --namespace=case03752258
 
+# CREATE PVC RESOURCES
+oc create --save-config=true -f ./pvc/maven-local-repo-pvc.yaml
+oc create --save-config=true -f ./pvc/task-pvc.yaml
+
 # CREATE TEKTON TASKS
 oc create --save-config=true -f ./tasks/get-source-with-git-task.yaml
 oc create --save-config=true -f ./tasks/execute-maven-task.yaml
