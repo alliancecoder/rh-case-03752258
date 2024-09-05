@@ -5,11 +5,14 @@ metadata:
 spec:
   taskRunTemplate:
     serviceAccountName: case03752258-pipeline-sa
+    podTemplate:
+      nodeSelector:
+        kubernetes.io/hostname: ip-10-0-182-200.ec2.internal
   pipelineRef:
     name: test-and-build-reproducer
   params:
     - name: image-tag
-      value: 4b33546b204c3882807d9ec636a363adc1223797
+      value: d1f5bc4b443cd9f60de75ae300fb1a40b73c80b1
   workspaces:
     - name: shared-workspace
       volumeClaimTemplate:
