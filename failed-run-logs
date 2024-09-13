@@ -1,0 +1,178 @@
+[fetch-app-source : git-clone] Cloning into '/workspace/source/app'...
+[fetch-app-source : git-clone] HEAD is now at d1f5bc4 allow local maven repo
+[fetch-app-source : git-clone] WARNING: git-filter-branch has a glut of gotchas generating mangled history
+[fetch-app-source : git-clone] 	 rewrites.  Hit Ctrl-C before proceeding to abort, then use an
+[fetch-app-source : git-clone] 	 alternative filtering tool such as 'git filter-repo'
+[fetch-app-source : git-clone] 	 (https://github.com/newren/git-filter-repo/) instead.  See the
+[fetch-app-source : git-clone] 	 filter-branch manual page for more details; to squelch this warning,
+[fetch-app-source : git-clone] 	 set FILTER_BRANCH_SQUELCH_WARNING=1.
+[fetch-app-source : git-clone] Proceeding with filter-branch...
+[fetch-app-source : git-clone] 
+[fetch-app-source : git-clone] Rewrite 50c30e44716abd0588d6a87687a43a2e67311a67 (1/5) (0 seconds passed, remaining 0 predicted)    Rewrite 85775dadae6c758217a478a93ad28d4c178781ae (2/5) (0 seconds passed, remaining 0 predicted)    Rewrite f341a545234632b0157586a93e5bd313c669d675 (3/5) (0 seconds passed, remaining 0 predicted)    Rewrite fc420e862390fa86d18cf39371ba933a7c351fc8 (4/5) (0 seconds passed, remaining 0 predicted)    Rewrite 439b0710a4cc750cb720c2640d0de864d8f494a3 (5/5) (0 seconds passed, remaining 0 predicted)    
+[fetch-app-source : git-clone] Ref 'refs/heads/Pipeline' was rewritten
+
+[test-service : mvn-settings] using existing /workspace/maven-settings/settings.xml
+
+[test-service : maven-goals] [INFO] Scanning for projects...
+[test-service : maven-goals] [INFO] 
+[test-service : maven-goals] [INFO] -------< org.electricaltrainingalliance:case03752258-reproducer >-------
+[test-service : maven-goals] [INFO] Building case03752258-reproducer 1.0.0-SNAPSHOT
+[test-service : maven-goals] [INFO] --------------------------------[ jar ]---------------------------------
+[test-service : maven-goals] [INFO] 
+[test-service : maven-goals] [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ case03752258-reproducer ---
+[test-service : maven-goals] [INFO] 
+[test-service : maven-goals] [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ case03752258-reproducer ---
+[test-service : maven-goals] [INFO] Using 'UTF-8' encoding to copy filtered resources.
+[test-service : maven-goals] [INFO] Copying 2 resources
+[test-service : maven-goals] [INFO] 
+[test-service : maven-goals] [INFO] --- quarkus-maven-plugin:3.8.4.SP2-redhat-00001:generate-code (default) @ case03752258-reproducer ---
+[test-service : maven-goals] [INFO] 
+[test-service : maven-goals] [INFO] --- maven-compiler-plugin:3.12.1:compile (default-compile) @ case03752258-reproducer ---
+[test-service : maven-goals] [INFO] Recompiling the module because of changed source code.
+[test-service : maven-goals] [INFO] Compiling 4 source files with javac [debug release 21] to target/classes
+[test-service : maven-goals] [INFO] 
+[test-service : maven-goals] [INFO] --- quarkus-maven-plugin:3.8.4.SP2-redhat-00001:generate-code-tests (default) @ case03752258-reproducer ---
+[test-service : maven-goals] [INFO] 
+[test-service : maven-goals] [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ case03752258-reproducer ---
+[test-service : maven-goals] [INFO] Using 'UTF-8' encoding to copy filtered resources.
+[test-service : maven-goals] [INFO] skip non existing resourceDirectory /workspace/source/app/src/test/resources
+[test-service : maven-goals] [INFO] 
+[test-service : maven-goals] [INFO] --- maven-compiler-plugin:3.12.1:testCompile (default-testCompile) @ case03752258-reproducer ---
+[test-service : maven-goals] [INFO] Recompiling the module because of changed dependency.
+[test-service : maven-goals] [INFO] Compiling 2 source files with javac [debug release 21] to target/test-classes
+[test-service : maven-goals] [INFO] Annotation processing is enabled because one or more processors were found
+[test-service : maven-goals]   on the class path. A future release of javac may disable annotation processing
+[test-service : maven-goals]   unless at least one processor is specified by name (-processor), or a search
+[test-service : maven-goals]   path is specified (--processor-path, --processor-module-path), or annotation
+[test-service : maven-goals]   processing is enabled explicitly (-proc:only, -proc:full).
+[test-service : maven-goals]   Use -Xlint:-options to suppress this message.
+[test-service : maven-goals]   Use -proc:none to disable annotation processing.
+[test-service : maven-goals] [INFO] 
+[test-service : maven-goals] [INFO] --- maven-surefire-plugin:3.2.5:test (default-test) @ case03752258-reproducer ---
+[test-service : maven-goals] [INFO] Tests are skipped.
+[test-service : maven-goals] [INFO] 
+[test-service : maven-goals] [INFO] --- maven-surefire-plugin:3.2.5:test (unit-tests) @ case03752258-reproducer ---
+[test-service : maven-goals] [INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[test-service : maven-goals] [INFO] 
+[test-service : maven-goals] [INFO] -------------------------------------------------------
+[test-service : maven-goals] [INFO]  T E S T S
+[test-service : maven-goals] [INFO] -------------------------------------------------------
+[test-service : maven-goals] [INFO] Running org.electricaltrainingalliance.tickets.entity.RHTicketTest
+[test-service : maven-goals] 2024-09-13 13:39:13,582 WARN  [org.tes.doc.DockerClientProviderStrategy] (build-13) DOCKER_HOST unix:///var/run/docker.sock is not listening
+[test-service : maven-goals] 2024-09-13 13:39:13,597 INFO  [org.tes.doc.DockerMachineClientProviderStrategy] (build-13) docker-machine executable was not found on PATH ([/usr/local/sbin, /usr/local/bin, /usr/sbin, /usr/bin, /sbin, /bin, /usr/local/s2i])
+[test-service : maven-goals] 2024-09-13 13:39:13,598 ERROR [org.tes.doc.DockerClientProviderStrategy] (build-13) Could not find a valid Docker environment. Please check configuration. Attempted configurations were:
+[test-service : maven-goals] 	DockerDesktopClientProviderStrategy: failed with exception NullPointerException (Cannot invoke "java.nio.file.Path.toString()" because the return value of "org.testcontainers.dockerclient.DockerDesktopClientProviderStrategy.getSocketPath()" is null)As no valid configuration was found, execution cannot continue.
+[test-service : maven-goals] See https://java.testcontainers.org/on_failure.html for more details.
+[test-service : maven-goals] [ERROR] Tests run: 2, Failures: 0, Errors: 1, Skipped: 1, Time elapsed: 7.655 s <<< FAILURE! -- in org.electricaltrainingalliance.tickets.entity.RHTicketTest
+[test-service : maven-goals] [ERROR] org.electricaltrainingalliance.tickets.entity.RHTicketTest.can_create_valid_ticket -- Time elapsed: 0.007 s <<< ERROR!
+[test-service : maven-goals] java.lang.RuntimeException: 
+[test-service : maven-goals] java.lang.RuntimeException: io.quarkus.builder.BuildException: Build failure: Build failed due to errors
+[test-service : maven-goals] 	[error]: Build step io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor#launchDatabases threw an exception: java.lang.IllegalStateException: Please configure the datasource URL for default datasource or ensure the Docker daemon is up and running.
+[test-service : maven-goals] 	at io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor.startDevDb(DevServicesDatasourceProcessor.java:256)
+[test-service : maven-goals] 	at io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor.launchDatabases(DevServicesDatasourceProcessor.java:142)
+[test-service : maven-goals] 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+[test-service : maven-goals] 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+[test-service : maven-goals] 	at io.quarkus.deployment.ExtensionLoader$3.execute(ExtensionLoader.java:849)
+[test-service : maven-goals] 	at io.quarkus.builder.BuildContext.run(BuildContext.java:256)
+[test-service : maven-goals] 	at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
+[test-service : maven-goals] 	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+[test-service : maven-goals] 	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1538)
+[test-service : maven-goals] 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[test-service : maven-goals] 	at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+[test-service : maven-goals] 
+[test-service : maven-goals] 	at io.quarkus.test.junit.QuarkusTestExtension.throwBootFailureException(QuarkusTestExtension.java:638)
+[test-service : maven-goals] 	at io.quarkus.test.junit.QuarkusTestExtension.interceptTestClassConstructor(QuarkusTestExtension.java:722)
+[test-service : maven-goals] 	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+[test-service : maven-goals] 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+[test-service : maven-goals] 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+[test-service : maven-goals] Caused by: java.lang.RuntimeException: io.quarkus.builder.BuildException: Build failure: Build failed due to errors
+[test-service : maven-goals] 	[error]: Build step io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor#launchDatabases threw an exception: java.lang.IllegalStateException: Please configure the datasource URL for default datasource or ensure the Docker daemon is up and running.
+[test-service : maven-goals] 	at io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor.startDevDb(DevServicesDatasourceProcessor.java:256)
+[test-service : maven-goals] 	at io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor.launchDatabases(DevServicesDatasourceProcessor.java:142)
+[test-service : maven-goals] 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+[test-service : maven-goals] 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+[test-service : maven-goals] 	at io.quarkus.deployment.ExtensionLoader$3.execute(ExtensionLoader.java:849)
+[test-service : maven-goals] 	at io.quarkus.builder.BuildContext.run(BuildContext.java:256)
+[test-service : maven-goals] 	at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
+[test-service : maven-goals] 	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+[test-service : maven-goals] 	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1538)
+[test-service : maven-goals] 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[test-service : maven-goals] 	at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+[test-service : maven-goals] 
+[test-service : maven-goals] 	at io.quarkus.runner.bootstrap.AugmentActionImpl.runAugment(AugmentActionImpl.java:334)
+[test-service : maven-goals] 	at io.quarkus.runner.bootstrap.AugmentActionImpl.createInitialRuntimeApplication(AugmentActionImpl.java:251)
+[test-service : maven-goals] 	at io.quarkus.runner.bootstrap.AugmentActionImpl.createInitialRuntimeApplication(AugmentActionImpl.java:60)
+[test-service : maven-goals] 	at io.quarkus.test.junit.QuarkusTestExtension.doJavaStart(QuarkusTestExtension.java:224)
+[test-service : maven-goals] 	at io.quarkus.test.junit.QuarkusTestExtension.ensureStarted(QuarkusTestExtension.java:605)
+[test-service : maven-goals] 	at io.quarkus.test.junit.QuarkusTestExtension.beforeAll(QuarkusTestExtension.java:655)
+[test-service : maven-goals] 	... 1 more
+[test-service : maven-goals] Caused by: io.quarkus.builder.BuildException: Build failure: Build failed due to errors
+[test-service : maven-goals] 	[error]: Build step io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor#launchDatabases threw an exception: java.lang.IllegalStateException: Please configure the datasource URL for default datasource or ensure the Docker daemon is up and running.
+[test-service : maven-goals] 	at io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor.startDevDb(DevServicesDatasourceProcessor.java:256)
+[test-service : maven-goals] 	at io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor.launchDatabases(DevServicesDatasourceProcessor.java:142)
+[test-service : maven-goals] 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+[test-service : maven-goals] 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+[test-service : maven-goals] 	at io.quarkus.deployment.ExtensionLoader$3.execute(ExtensionLoader.java:849)
+[test-service : maven-goals] 	at io.quarkus.builder.BuildContext.run(BuildContext.java:256)
+[test-service : maven-goals] 	at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
+[test-service : maven-goals] 	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+[test-service : maven-goals] 	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1538)
+[test-service : maven-goals] 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[test-service : maven-goals] 	at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+[test-service : maven-goals] 
+[test-service : maven-goals] 	at io.quarkus.builder.Execution.run(Execution.java:123)
+[test-service : maven-goals] 	at io.quarkus.builder.BuildExecutionBuilder.execute(BuildExecutionBuilder.java:79)
+[test-service : maven-goals] 	at io.quarkus.deployment.QuarkusAugmentor.run(QuarkusAugmentor.java:160)
+[test-service : maven-goals] 	at io.quarkus.runner.bootstrap.AugmentActionImpl.runAugment(AugmentActionImpl.java:330)
+[test-service : maven-goals] 	... 6 more
+[test-service : maven-goals] Caused by: java.lang.IllegalStateException: Please configure the datasource URL for default datasource or ensure the Docker daemon is up and running.
+[test-service : maven-goals] 	at io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor.startDevDb(DevServicesDatasourceProcessor.java:256)
+[test-service : maven-goals] 	at io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor.launchDatabases(DevServicesDatasourceProcessor.java:142)
+[test-service : maven-goals] 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+[test-service : maven-goals] 	at io.quarkus.deployment.ExtensionLoader$3.execute(ExtensionLoader.java:849)
+[test-service : maven-goals] 	at io.quarkus.builder.BuildContext.run(BuildContext.java:256)
+[test-service : maven-goals] 	at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
+[test-service : maven-goals] 	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+[test-service : maven-goals] 	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1538)
+[test-service : maven-goals] 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[test-service : maven-goals] 	at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+[test-service : maven-goals] 
+[test-service : maven-goals] [INFO] 
+[test-service : maven-goals] [INFO] Results:
+[test-service : maven-goals] [INFO] 
+[test-service : maven-goals] [ERROR] Errors: 
+[test-service : maven-goals] [ERROR]   RHTicketTest.can_create_valid_ticket » Runtime java.lang.RuntimeException: io.quarkus.builder.BuildException: Build failure: Build failed due to errors
+[test-service : maven-goals] 	[error]: Build step io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor#launchDatabases threw an exception: java.lang.IllegalStateException: Please configure the datasource URL for default datasource or ensure the Docker daemon is up and running.
+[test-service : maven-goals] 	at io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor.startDevDb(DevServicesDatasourceProcessor.java:256)
+[test-service : maven-goals] 	at io.quarkus.datasource.deployment.devservices.DevServicesDatasourceProcessor.launchDatabases(DevServicesDatasourceProcessor.java:142)
+[test-service : maven-goals] 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+[test-service : maven-goals] 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+[test-service : maven-goals] 	at io.quarkus.deployment.ExtensionLoader$3.execute(ExtensionLoader.java:849)
+[test-service : maven-goals] 	at io.quarkus.builder.BuildContext.run(BuildContext.java:256)
+[test-service : maven-goals] 	at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
+[test-service : maven-goals] 	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+[test-service : maven-goals] 	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1538)
+[test-service : maven-goals] 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[test-service : maven-goals] 	at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+[test-service : maven-goals] 
+[test-service : maven-goals] [INFO] 
+[test-service : maven-goals] [ERROR] Tests run: 2, Failures: 0, Errors: 1, Skipped: 1
+[test-service : maven-goals] [INFO] 
+[test-service : maven-goals] [INFO] ------------------------------------------------------------------------
+[test-service : maven-goals] [INFO] BUILD FAILURE
+[test-service : maven-goals] [INFO] ------------------------------------------------------------------------
+[test-service : maven-goals] [INFO] Total time:  20.060 s
+[test-service : maven-goals] [INFO] Finished at: 2024-09-13T13:39:14Z
+[test-service : maven-goals] [INFO] ------------------------------------------------------------------------
+[test-service : maven-goals] [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.5:test (unit-tests) on project case03752258-reproducer: 
+[test-service : maven-goals] [ERROR] 
+[test-service : maven-goals] [ERROR] Please refer to /workspace/source/app/target/surefire-reports for the individual test results.
+[test-service : maven-goals] [ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[test-service : maven-goals] [ERROR] -> [Help 1]
+[test-service : maven-goals] [ERROR] 
+[test-service : maven-goals] [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[test-service : maven-goals] [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[test-service : maven-goals] [ERROR] 
+[test-service : maven-goals] [ERROR] For more information about the errors and possible solutions, please read the following articles:
+[test-service : maven-goals] [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
